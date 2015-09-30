@@ -1,0 +1,56 @@
+<html>
+  <head>
+    <script src="bower_components/pubnub/web/pubnub.min.js"></script>
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/jquery/src/jquery.js"></script>
+    <script src="bower_components/pubnub-angular/lib/pubnub-angular.js"></script>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/broadcast.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Fjalla+One' rel='stylesheet' type='text/css'>
+    </head>
+
+    <body ng-app="VandyRadioGameApp" ng-controller="MainCtrl">
+
+
+       <div class="stats col-md-4 col-md-offset-1">
+          <h1>Game Controller</h1>
+          <hr>
+	<input class="col-md-8" type="text" ng-model="state.title" placeholder="Live Game" style="color: gray"/>
+	<br /><br />
+	<input class="col-md-8" type="text" ng-model="state.datetime" placeholder="Game Date and Time" style="color: gray"/>
+	<br /><br />
+          <input class="col-md-4" type="text" ng-model="state.teamone" placeholder="Home Team" style="color: gray"/>
+          <input class="col-md-2" type="text" ng-model="state.scoreone" placeholder="Home Score" style="color: gray"/>
+          <br /><br />
+          <input class="col-md-4" type="text" ng-model="state.teamtwo" placeholder="Away Team" style="color: gray"/>
+          <input class="col-md-2" type="text" ng-model="state.scoretwo" placeholder="Away Score" style="color: gray" />
+          <br /><br />
+          <input class="col-md-4" type="text" ng-model="state.period" placeholder="Period" style="color: gray"/>
+	<br/><br/>
+	<input class="col-md-4" type="text" ng-model="state.time" placeholder="Time Left" style="color: gray"/>
+          <br /><br />
+
+          <textarea class="col-md-8" type="text" ng-model="state.last_play" placeholder="Last Play" style="color: gray"></textarea>
+          <br /><br /><br /><br />
+          <hr>
+          <button ng-click="publish()" class="send col-md-12">Send Game Stats</button>
+	<br /><br /><br /><br /><br />
+	<button ng-click="reset()" class="reset col-md-8 col-md-offset-2">Reset Game</button>
+        </div>
+
+      <div class="broadcast col-md-4 col-md-offset-1 vcenter">
+        <h2>{{state.title}}</h2>
+        <h5>{{state.datetime}}</h5>
+        <hr>
+        <h4>{{state.teamone}}: {{state.scoreone}}</h4>
+        <h4>{{state.teamtwo}}: {{state.scoretwo}}</h4>
+        <hr>
+        <h4>Period: {{state.period}}</h4>
+        <h4>Time Left: {{state.time}}</h4>
+        <hr>
+        <h4>Last Play: {{state.last_play}}</h4>
+        <hr>
+      </div>
+  </body>
+</html>

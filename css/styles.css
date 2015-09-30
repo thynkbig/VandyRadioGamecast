@@ -1,0 +1,72 @@
+html {
+  background-color: #666;
+  font-family: 'Fjalla One', sans-serif;
+}
+
+body {
+  background-color: #666;
+  font-family: 'Fjalla One', sans-serif;
+}
+
+.logo {
+	width: 100%;
+	height: auto;
+	margin: 0 auto;
+	text-align: center;
+}
+
+img {
+	width: 17.5%;
+	height: auto;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.vcenter {
+  display: inline-block;
+  float: none;
+}
+.broadcast {
+  color: white;
+  padding: 0;
+  font-family: 'Fjalla One', sans-serif;
+  background-color: #666;
+  max-width: 750px;
+  margin: auto;
+  }
+.stats {
+  color: white;
+  padding: 3.0%;
+  font-family: 'Fjalla One', sans-serif;
+  background-color: #666;
+
+}
+input {
+  color: black;
+}
+button{
+  background-color: white;
+  color: black;
+}
+.send{
+background-color:#30EE30;
+  color: black;
+  height: 80px;
+  font-size: 45px;
+}
+.reset{
+  background-color:#EE3030;
+  color: black;
+}
+
+hr{
+ border: 0;
+ height: 3px;
+ background: #ffd354;
+ background-image: linear-gradient(to right, #666, #ffd354, #666);
+}
+
+.player{
+	margin: auto;
+	text-align: center;
+}
