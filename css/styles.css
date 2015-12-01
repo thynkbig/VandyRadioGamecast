@@ -41,8 +41,9 @@ img {
   background-color: #666;
 
 }
-input {
+input, textarea {
   color: black;
+  font-size: 4em;
 }
 button{
   background-color: white;
@@ -51,12 +52,15 @@ button{
 .send{
 background-color:#30EE30;
   color: black;
-  height: 80px;
-  font-size: 45px;
+  height: 120px;
+  font-size: 6em;
+  margin-bottom: 100px;
 }
 .reset{
   background-color:#EE3030;
   color: black;
+  height: 60px;
+  font-size: 3em;
 }
 
 hr{

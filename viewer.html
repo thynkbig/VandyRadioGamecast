@@ -1,0 +1,20 @@
+
+<script src="http://www.vandyradio.com/gamecast/bower_components/pubnub/web/pubnub.min.js"></script>
+<script src="http://www.vandyradio.com/gamecast/bower_components/angular/angular.min.js"></script>
+<script src="http://www.vandyradio.com/gamecast/bower_components/jquery/src/jquery.js"></script>
+<script src="http://www.vandyradio.com/gamecast/bower_components/pubnub-angular/lib/pubnub-angular.js"></script>
+<script src="http://www.vandyradio.com/gamecast/js/subscriber.js"></script>
+
+<div ng-app="VandyRadioGameApp" ng-controller="MainCtrl">
+
+    <div class="broadcast">
+      <h1>{{state.title}}</h1>
+      <h4>{{state.datetime}}</h4>
+      <h2>{{state.teamone}}: {{state.scoreone}}</h2>
+      <h2>{{state.teamtwo}}: {{state.scoretwo}}</h2>
+      <p>Period: {{state.period}}</p>
+      <p>Time Left: {{state.time}}</p>
+      <p>Last Play: {{state.last_play}}</p>  
+    </div>
+
+  </div>
