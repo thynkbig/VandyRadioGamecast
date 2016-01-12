@@ -35,5 +35,12 @@ var app = angular.module('VandyRadioGameApp',["pubnub.angular.service"]);
               message: $scope.state
             });
           };
+	  
+	  setInterval(function() {
+            PubNub.ngPublish({
+              channel: $scope.channel,
+              message: $scope.state
+            });
+          }, 10000);
 
         });
